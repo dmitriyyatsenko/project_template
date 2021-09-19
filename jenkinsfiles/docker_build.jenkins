@@ -38,5 +38,13 @@ pipeline {
                 '''
             }
         }
+        stage("docker start") {
+            steps {
+                echo " ============== start container =================="
+                sh '''
+                docker run dmitriyyatsenko/toolbox:latest
+                '''
+            }
+        }
     }
 }
